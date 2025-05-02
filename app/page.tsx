@@ -126,7 +126,7 @@ export default function Portfolio() {
             <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/My Professional pic.jpg"
                 alt="About Me"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -317,7 +317,7 @@ export default function Portfolio() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white">Email</h3>
-                  <p className="text-white/70">hello@johndoe.com</p>
+                  <p className="text-white/70">sohamkalg@gmail.com</p>
                 </div>
               </div>
 
@@ -327,7 +327,7 @@ export default function Portfolio() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white">Work Inquiries</h3>
-                  <p className="text-white/70">work@johndoe.com</p>
+                  <p className="text-white/70">+ 91 7045470742</p>
                 </div>
               </div>
 
@@ -437,7 +437,7 @@ export default function Portfolio() {
       <footer className="py-8 border-t border-white/10 relative z-10">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-white/60">© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+            <p className="text-sm text-white/60">© {new Date().getFullYear()} Soham Kalgutkar. All rights reserved.</p>
             <div className="flex items-center gap-1 text-white/60">
               <p className="text-sm">Designed & Built with</p>
               <Star className="h-4 w-4 text-accent fill-accent" />
