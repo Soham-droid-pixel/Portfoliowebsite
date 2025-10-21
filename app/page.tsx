@@ -40,15 +40,6 @@ export default function Portfolio() {
         message: formData.get('message'),
       }
       
-      // Get access key from environment variable
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
-      
-      if (!accessKey) {
-        toast.error("Form configuration error. Please contact me directly at sohamkalg@gmail.com")
-        console.error("Web3Forms access key is not configured")
-        return
-      }
-      
       // Using Web3Forms - Free form service
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -57,7 +48,7 @@ export default function Portfolio() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: accessKey,
+          access_key: "10879ca7-8194-488d-bb53-b3f239719495",
           name: data.name,
           email: data.email,
           subject: data.subject,
