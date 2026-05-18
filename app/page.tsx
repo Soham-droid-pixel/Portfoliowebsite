@@ -84,27 +84,54 @@ export default function Portfolio() {
 
       {/* Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 glass">
-        <div className="container flex items-center justify-between h-16 px-4 md:px-6">
-          <Link href="#" className="text-xl font-bold text-gradient">
-            Portfolio
-          </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="#about" className="text-sm font-medium text-white/80 hover:text-accent transition-colors">
-              About
+        <div className="container px-4 md:px-6">
+          <div className="flex items-center justify-between h-16">
+            <Link href="#" className="text-xl font-bold text-gradient">
+              Portfolio
             </Link>
-            <Link href="#projects" className="text-sm font-medium text-white/80 hover:text-accent transition-colors">
-              Projects
-            </Link>
-            <Link href="#contact" className="text-sm font-medium text-white/80 hover:text-accent transition-colors">
-              Contact
-            </Link>
+            <nav className="hidden md:flex items-center gap-6">
+              <Link href="#about" className="text-sm font-medium text-white/80 hover:text-accent transition-colors">
+                About
+              </Link>
+              <Link href="#projects" className="text-sm font-medium text-white/80 hover:text-accent transition-colors">
+                Projects
+              </Link>
+              <Link href="#research" className="text-sm font-medium text-white/80 hover:text-accent transition-colors">
+                Research
+              </Link>
+              <Link href="#awards" className="text-sm font-medium text-white/80 hover:text-accent transition-colors">
+                Awards & Patents
+              </Link>
+              <Link href="#contact" className="text-sm font-medium text-white/80 hover:text-accent transition-colors">
+                Contact
+              </Link>
+            </nav>
+            <Button
+              asChild
+              className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 transition-opacity"
+            >
+              <Link href="#contact">Get in Touch</Link>
+            </Button>
+          </div>
+          <nav className="md:hidden pb-3">
+            <div className="flex items-center gap-4 overflow-x-auto text-sm text-white/80">
+              <Link href="#about" className="whitespace-nowrap hover:text-accent transition-colors">
+                About
+              </Link>
+              <Link href="#projects" className="whitespace-nowrap hover:text-accent transition-colors">
+                Projects
+              </Link>
+              <Link href="#research" className="whitespace-nowrap hover:text-accent transition-colors">
+                Research
+              </Link>
+              <Link href="#awards" className="whitespace-nowrap hover:text-accent transition-colors">
+                Awards & Patents
+              </Link>
+              <Link href="#contact" className="whitespace-nowrap hover:text-accent transition-colors">
+                Contact
+              </Link>
+            </div>
           </nav>
-          <Button
-            asChild
-            className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 transition-opacity"
-          >
-            <Link href="#contact">Get in Touch</Link>
-          </Button>
         </div>
       </header>
 
@@ -351,6 +378,136 @@ export default function Portfolio() {
                 <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Research Publications and Awards Section */}
+      <section id="research" className="py-20 md:py-32 relative z-10">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center text-center mb-16">
+            <div className="inline-flex items-center justify-center p-2 bg-white/5 rounded-lg mb-4 border border-white/10">
+              <Sparkles className="h-6 w-6 text-accent" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-gradient">Research Publications</h2>
+            <div className="w-12 h-1 bg-gradient-to-r from-primary to-accent mt-4 mb-6 rounded-full"></div>
+            <p className="text-white/70 max-w-[700px]">
+              Selected research work and conference publications focused on TinyML, XAI, and applied AI systems.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            {[
+              {
+                title: "TinySleepNetX",
+                venue: "ICASET 2026",
+                status: "Presented, publication in progress",
+                focus: "TinyML, XAI, EEG sleep staging",
+                summary:
+                  "A lightweight deep learning model for single-channel EEG sleep staging. Replaces recurrent networks with temporal attention for interpretability and visualization.",
+                details:
+                  "Optimized for edge computing with a frequency-sensitive feature extractor, achieving competitive accuracy on Sleep-EDF with minimal inference cost.",
+                link: "https://drive.google.com/file/d/1owQAB6H5do8wYIqpBZc_aOI6MP5kHW4d/view",
+              },
+              {
+                title: "Indigenous Bovine Breed Classification",
+                venue: "ICRETM 2026",
+                status: "Presented, publication in progress",
+                focus: "Transfer learning, ArcFace",
+                summary:
+                  "Engineered a fine-grained breed classifier for 16 native bovine breeds using EfficientNet-B0 with ArcFace, improving F1 on visually similar breeds by 39%.",
+                details:
+                  "Optimized for edge AI deployment with a 54 MB model and 50 ms latency, enabling offline mobile identification for the Bharat Pashudhan mission.",
+                link: "https://drive.google.com/file/d/1kow1A2RUUJK7FDQVAwJ47tJqKSSv2cbU/view",
+              },
+            ].map((paper, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="text-xl font-bold group-hover:text-gradient transition-all duration-300">
+                        {paper.title}
+                      </h3>
+                      <p className="text-sm text-white/70 mt-1">
+                        {paper.venue} | {paper.focus}
+                      </p>
+                      <p className="text-xs text-white/60 mt-1">{paper.status}</p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-white/70">{paper.summary}</p>
+                  <p className="mt-3 text-white/70">{paper.details}</p>
+                  {paper.link && (
+                    <div className="mt-6">
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="gap-1 border-white/20 text-white hover:bg-white/10 hover:text-accent group-hover:border-accent/50 transition-all duration-300"
+                      >
+                        <Link href={paper.link} target="_blank" rel="noopener noreferrer">
+                          View Publication <ExternalLink className="h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div id="awards" className="mt-16">
+            <div className="flex flex-col items-center text-center mb-10">
+              <h3 className="text-2xl md:text-3xl font-bold tracking-tighter text-gradient">Awards & Patents</h3>
+              <div className="w-10 h-1 bg-gradient-to-r from-primary to-accent mt-4 rounded-full"></div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+  title: "Overall Winner: Data Analytics Hackathon 3.0",
+  org: "IES MCRC (Avenir Analytics Club)",
+  note: "Won the competition across three major tracks: 1st Place Overall for a data-driven analytics solution, 1st Prize in the Impact Startup Challenge for a scalable engineering-to-business model, and 3rd Prize in the Dashboard Challenge for elite UI/UX data storytelling.",
+  link: "https://drive.google.com/file/d/14yeuHFYkAa3oUVTXMoqdpPtM04Qd3esI/view",
+},
+                {
+                  title: "Patent Published: Project K.A (Kitchen Automate)",
+                  org: "IoT and AI-based smart kitchen trolley",
+                  note: "The Smart Kitchen Inventory and Recipe Suggestion System is an IoT-enabled kitchen management solution designed to simplify meal planning and inventory tracking. Equipped with weight sensors, cameras, and a mobile app interface, this smart system automates ingredient monitoring, offers personalized recipe recommendations based on available stock, and generates grocery lists to streamline shopping. The system includes a sensor-enabled kitchen trolley with dedicated compartments, a cloud-based backend for data processing, and a mobile app for real-time updates, low-stock alerts, and meal suggestions. By combining sensor data with image recognition, the system ensures precise inventory management, minimizes food waste, and promotes ingredient freshness for a more efficient cooking experience.",
+                  link: "https://drive.google.com/file/d/1ZIewXOCptQwYPhQPuUZVmyl8P_uc0QFG/view",
+                },
+              ].map((award, index) => (
+                <div
+                  key={index}
+                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10">
+                    <h4 className="text-lg font-semibold group-hover:text-gradient transition-all duration-300">
+                      {award.title}
+                    </h4>
+                    <p className="text-sm text-white/70 mt-1">{award.org}</p>
+                    <p className="text-white/70 mt-3">{award.note}</p>
+                    {award.link && (
+                      <div className="mt-5">
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="sm"
+                          className="gap-1 border-white/20 text-white hover:bg-white/10 hover:text-accent group-hover:border-accent/50 transition-all duration-300"
+                        >
+                          <Link href={award.link} target="_blank" rel="noopener noreferrer">
+                            View Details <ExternalLink className="h-4 w-4" />
+                          </Link>
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
