@@ -118,9 +118,9 @@ export default function Portfolio() {
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
               <span className="text-gradient">Soham</span> Kalgutkar
             </h1>
-            <p className="text-xl md:text-2xl text-white/80">MERN Stack Developer || AI ML Data Science Enthusiast</p>
+            <p className="text-xl md:text-2xl text-white/80"> AI/ML Researcher & Engineer || MERN Stack Developer </p>
             <p className="max-w-[600px] text-white/70">
-              Building efficient full-stack applications and solving problems with Python-based AI/ML.
+               Bridging the gap between rigorous machine learning research and scalable software engineering to solve complex, real-world problems.  
               <br />
             </p>
             <div className="flex gap-4 mt-4">
@@ -176,31 +176,43 @@ export default function Portfolio() {
               />
             </div>
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gradient">Hi, I'm Soham Kalgutkar</h3>
-              <p className="text-white/70">
-                I'm a developer specializing in the MERN stack (MongoDB, Express.js, React, Node.js) and PostgreSQL to build modern web applications.
-              </p>
-              <p className="text-white/70">
-                My core passion lies in AI, Machine Learning, and Data Science using Python. I also sharpen my problem-solving skills with DSA in C++ and have explored mobile development with React Native and Kotlin.
-              </p>
-              <p className="text-white/70">
-                I have a strong interest in core computer engineering subjects and enjoy applying that knowledge to create practical, data-driven solutions.
-              </p>
+  <h3 className="text-2xl font-bold text-gradient">Hi, I'm Soham Kalgutkar</h3>
+  
+  <p className="text-white/70">
+    I am an AI/ML Researcher and Software Engineer focused on bridging the gap between advanced deep learning and scalable production systems. I specialize in engineering end-to-end intelligent applications that seamlessly unite robust software architecture with cutting-edge GenAI.
+  </p>
+  
+  <p className="text-white/70">
+    My technical expertise spans TinyML, computer vision, NLP, and Explainable AI (XAI). Backed by peer-reviewed research, I design lightweight, high-precision architectures—ranging from edge-optimized models to fine-tuned LLMs—while building local-first developer tools that streamline machine learning workflows.
+  </p>
+  
+  <p className="text-white/70">
+    Grounded in core computer engineering principles and high-performance problem-solving in C++, I thrive on optimizing systems under strict real-world constraints—always prioritizing high execution speed, minimal latency, and robust data privacy.
+  </p>
 
               <div className="pt-4">
                 <h4 className="font-semibold mb-3 text-white/90">My Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Python",
-                    "Machine Learning",
-                    "Data Science",
-                    "JavaScript",
-                    "MERN Stack",
-                    "C++",
-                    "PostgreSQL",
-                    "Data Structures & Algorithms",
-                    "React Native (Exploring)",
-                    "Kotlin (Exploring)"
+                    "Python", 
+  "C++", 
+  "JavaScript", 
+  "Data Structures & Algorithms",
+  
+  // Advanced AI / ML & Research
+  "PyTorch", 
+  "Hugging Face", 
+  "Generative AI & LLMs",
+  "Computer Vision", 
+  "Natural Language Processing (NLP)", 
+  "TinyML / Edge AI", 
+  "Explainable AI (XAI)",
+  
+  // Full-Stack & Architecture
+  "MERN Stack", 
+  "PostgreSQL", 
+  "Model Context Protocol (MCP)",
+  "Streamlit"
                   ].map((skill) => (
                     <span
                       key={skill}
