@@ -253,6 +253,13 @@ export default function Portfolio() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
+  title: "ModelViz: PyTorch Architecture Visualizer",
+  description: "A VS Code extension that automatically converts complex PyTorch AI code into interactive visual graphs. Built with a local-first architecture to ensure data privacy, helping developers easily debug and trace machine learning models in real time.",
+  tags: ["TypeScript", "Python", "PyTorch", "MCP", "React"],
+  image: "/icon.png",
+  link: "https://github.com/Soham-droid-pixel/ModelViz", 
+},
+              {
                 title: "MindTrack: Mental Health Analyzer (HuggingFace)",
                 description: "An NLP system using DistilBERT and LIME to detect mental health risks from text, with a live Streamlit dashboard for Reddit monitoring.",
                 tags: ["Python", "NLP", "Hugging Face", "LIME", "Streamlit"],
@@ -260,19 +267,12 @@ export default function Portfolio() {
                 link: "https://github.com/Soham-droid-pixel/Mind_Track_Project",
               },
               {
-                title: "AmazonX: Product Recommendation Engine",
-                description: "An intelligent engine using KMeans clustering and user behavior (browsing, abandoned carts) to provide dynamic, personalized product suggestions.",
-                tags: ["Python", "Machine Learning", "KMeans", "Data Science"],
-                image: "/AmazonX.png",
-                link: "https://github.com/Soham-droid-pixel/AmazonProj",
-              },
-              {
-                title: "Smart Stock Suggester",
-                description: "A data-driven prototype for shops to optimize inventory and pricing using location-based demand, profitability, and stock-level metrics.",
-                tags: ["Python", "Data Analysis", "Flask", "Streamlit"],
-                image: "/SmartStockSugg.png",
-                link: "https://github.com/Soham-droid-pixel/SmartStockSuggester",
-              },
+  title: "SecureRAG: Encrypted Document Chatbot",
+  description: "A secure AI chatbot that allows users to upload private PDF documents and ask context-aware questions. Engineered with enterprise-grade data privacy, featuring database-level text encryption and strict JWT authentication to protect sensitive documents.",
+  tags: ["FastAPI", "LangChain", "ChromaDB", "React", "Cryptography"],
+  image: "/SecureRAG.png",
+  link: "https://github.com/Soham-droid-pixel/FAQ-Chatbot-RAG", 
+},
               {
                 title: "Course Allocation System",
                 description: "A full-stack university app (React/FastAPI) to automate course allocation. Students submit preferences and admins run the allocation algorithm.",
@@ -280,20 +280,20 @@ export default function Portfolio() {
                 image: "/CourseAllocation.png",
                 link: "https://github.com/Soham-droid-pixel/Course_Allocation",
               },
+ {
+  title: "jqlite: Compiler & Query Engine Visualizer (Private Repository:IP Protected)",
+  description: "An educational tool built to demystify compiler internals by 'visualizing the black box.' It provides an interactive way to teach lexical analysis, syntactic parsing, and AST optimization, using a low-latency web UI that lets students trace how raw JSON queries are parsed and executed under the hood.",
+  tags: ["C", "Flex/Bison", "Compiler Design", "Node.js", "Systems Programming"],
+  image: "/jqlite.jpeg",
+  link: "#", // Kept private/hidden as per IP protection
+},
               {
-                title: "MedVault: Medical Record Manager",
-                description: "A secure MERN stack app for managing medical records and appointments, featuring Cloudinary storage, JWT auth, and automated email reminders.",
-                tags: ["MERN Stack", "Node.js", "React.js", "MongoDB", "Nodemailer"],
-                image: "/MedVault.png",
-                link: "https://github.com/Soham-droid-pixel/MedVault2.0",
-              },
-              {
-                title: "Bank Document Protection Tool",
-                description: "A production-ready Python desktop app (GUI/CLI) for encrypting PDF & Excel files with audit logging and secure Windows Credential Management.",
-                tags: ["Python", "Security", "Desktop App", "Finance"],
-                image: "/BankDoc.png",
-                link: "https://github.com/Soham-droid-pixel/Bank_Document_Protection_Tool",
-              },
+  title: "Cloud-Sentry: Serverless Malware Scanner",
+  description: "An automated security pipeline that scans cloud file uploads for malware in real time using an event-driven AWS architecture. It ensures strict data privacy by analyzing secure file hashes against 70+ antivirus engines without exposing actual file contents, automatically isolating threats into a quarantine zone.",
+  tags: ["AWS Lambda", "Amazon S3", "Python (Boto3)", "DynamoDB", "Cybersecurity"],
+  image: "/CloudSentry.png",
+  link: "https://github.com/Soham-droid-pixel/CCL_MiniProject_Cloud-Sentry", 
+},
             ].map((project, index) => (
               <div
                 key={index}
@@ -321,18 +321,20 @@ export default function Portfolio() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-6">
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="gap-1 border-white/20 text-white hover:bg-white/10 hover:text-accent group-hover:border-accent/50 transition-all duration-300"
-                    >
-                      <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                        View Project <ExternalLink className="h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </div>
+                  {project.link && (
+                    <div className="mt-6">
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="gap-1 border-white/20 text-white hover:bg-white/10 hover:text-accent group-hover:border-accent/50 transition-all duration-300"
+                      >
+                        <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                          View Project <ExternalLink className="h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
