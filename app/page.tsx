@@ -145,7 +145,7 @@ export default function Portfolio() {
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
               <span className="text-gradient">Soham</span> Kalgutkar
             </h1>
-            <p className="text-xl md:text-2xl text-white/80"> AI/ML Researcher & Engineer || MERN Stack Developer </p>
+            <p className="text-xl md:text-2xl text-white/80"> AI/ML Researcher & Engineer || Full-Stack Developer </p>
             <p className="max-w-[600px] text-white/70">
                Bridging the gap between rigorous machine learning research and scalable software engineering to solve complex, real-world problems.  
               <br />
@@ -167,6 +167,24 @@ export default function Portfolio() {
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6">
+              <Button
+                asChild
+                className="w-full sm:w-auto bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 transition-opacity"
+              >
+                <Link href="/Soham_Kalgutkar_Resume_AIML.pdf" target="_blank" rel="noopener noreferrer">
+                  View AI/ML & Research Resume
+                </Link>
+              </Button>
+              <Button
+                asChild
+                className="w-full sm:w-auto bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 transition-opacity"
+              >
+                <Link href="/Soham_Kalgutkar_Resume_SDE.pdf" target="_blank" rel="noopener noreferrer">
+                  View Software Engineering (SDE) Resume
+                </Link>
+              </Button>
             </div>
             <div className="pt-8">
               <Link
